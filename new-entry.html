@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>New Entry - MyMood Journal</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <h1>MyMood Journal</h1>
+  <h2>How do you feel today?</h2>
+
+  <form id="moodForm" onsubmit="saveMood(event)">
+    <label><input type="radio" name="mood" value="😊 Happy" required /> 😊 Happy</label>
+    <label><input type="radio" name="mood" value="😐 Neutral" /> 😐 Neutral</label>
+    <label><input type="radio" name="mood" value="😢 Sad" /> 😢 Sad</label>
+    <label><input type="radio" name="mood" value="😠 Stressed" /> 😠 Stressed</label>
+    <label><input type="radio" name="mood" value="😄 Excited" /> 😄 Excited</label>
+
+    <br /><br />
+    <label>Note:</label><br />
+    <textarea id="note" rows="4" cols="40" placeholder="Write a note..."></textarea><br /><br />
+
+    <button type="submit" id="saveMoodButton">Save Entry</button>
+    <button type="button" onclick="window.location.href='index.html'">Cancel</button>
+
+    <p id="saveMessage" style="display: none; color: green; font-weight: bold;">✅ Mood saved!</p>
+  </form>
+
+  <!-- Dark Mode Toggle -->
+  <label class="switch">
+    <input type="checkbox" id="toggleDark" />
+    <span class="slider"></span>
+  </label>
+
+  <div style="text-align: center;">
+  <img src="logo.png" alt="MyMood Logo" style="width: 60px;">
+</div>
+
+  <br />
+  <a href="index.html">🏠 Home</a>
+  <a href="mood-history.html">🕓 History</a>
+</body>
+</html>
