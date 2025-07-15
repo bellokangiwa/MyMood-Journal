@@ -300,3 +300,94 @@ button:hover {
 body {
   transition: background-color 0.5s ease, color 0.5s ease;
 }
+/* Base layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+/* Form Styling */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+textarea, input[type="text"], input[type="radio"], button {
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+}
+
+button[type="button"] {
+  background-color: #ccc;
+  color: black;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #222;
+  color: white;
+}
+
+.dark-mode form {
+  background: #333;
+}
+
+/* Toggle Switch */
+.switch {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  form {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
