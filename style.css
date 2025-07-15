@@ -1,121 +1,130 @@
-/* Global styles */
+/* General body styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 15px;
-  background-color: #f2f2f2;
+  padding: 20px;
+  background-color: #f4f4f4;
   color: #000;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Heading */
+h1, h2 {
   text-align: center;
-}
-
-/* Headings */
-h1 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-
-h2 {
-  font-size: 1.3rem;
   margin-bottom: 20px;
 }
 
-/* Form container */
+/* Mood form */
 form {
-  background-color: white;
+  background: #fff;
   padding: 20px;
-  margin: 0 auto;
-  max-width: 500px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+body.dark-mode form {
+  background-color: #1e1e1e;
 }
 
 /* Mood options */
-form label {
+label {
   display: flex;
   align-items: center;
   font-size: 1.1rem;
-  margin: 10px 0;
-  cursor: pointer;
+  gap: 10px;
 }
 
-form input[type="radio"] {
-  margin-right: 10px;
-}
-
-/* Textarea */
 textarea {
-  width: 100%;
-  padding: 10px;
   font-size: 1rem;
-  resize: vertical;
-  margin-top: 5px;
+  padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  resize: vertical;
 }
 
-/* Buttons */
 button {
-  width: 100%;
   padding: 12px;
-  margin-top: 10px;
   font-size: 1rem;
-  border-radius: 5px;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 button[type="submit"] {
   background-color: #28a745;
-  color: white;
+  color: #fff;
 }
 
 button[type="button"] {
   background-color: #ccc;
-  color: black;
 }
 
-/* Dark mode */
-.dark-mode {
-  background-color: #121212;
-  color: white;
+button:hover {
+  opacity: 0.9;
 }
 
-.dark-mode form {
-  background-color: #222;
-}
-
-.dark-mode textarea {
-  background-color: #333;
-  color: white;
-  border: 1px solid #555;
-}
-
-/* Toggle switch */
-.switch {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-}
-
-/* Responsive layout */
+/* Responsive Design */
 @media (max-width: 480px) {
   body {
     padding: 10px;
   }
 
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-  }
-
-  button {
-    font-size: 0.95rem;
-  }
-
   form {
     padding: 15px;
   }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+}
+
+/* Logo styling */
+.logo {
+  display: block;
+  margin: 15px auto;
+  max-width: 120px;
+}
+
+/* Navigation links */
+a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Entry card */
+.entry {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+body.dark-mode .entry {
+  background-color: #222;
 }
