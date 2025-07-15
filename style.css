@@ -1,43 +1,42 @@
-/* General Styling */
+/* ===== Base Styling ===== */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   color: #000;
   margin: 0;
   padding: 20px;
+  max-width: 600px;
+  margin: auto;
 }
 
-/* Dark mode support */
-body.dark-mode {
-  background-color: #121212;
-  color: #fff;
-}
-
-/* Header */
 h1, h2 {
   text-align: center;
   margin-bottom: 20px;
 }
 
-/* Mood form */
+/* ===== Dark Mode ===== */
+body.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+body.dark-mode form,
+body.dark-mode .entry {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+/* ===== Form Styling ===== */
 form {
   background: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  max-width: 100%;
-  width: 100%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-body.dark-mode form {
-  background-color: #1e1e1e;
-}
-
-/* Labels */
 label {
   display: flex;
   align-items: center;
@@ -45,17 +44,16 @@ label {
   font-size: 1.1rem;
 }
 
-/* Text area */
 textarea {
   font-size: 1rem;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  width: 100%;
   resize: vertical;
+  width: 100%;
 }
 
-/* Buttons */
+/* ===== Buttons ===== */
 button {
   padding: 12px;
   font-size: 1rem;
@@ -69,199 +67,54 @@ button[type="submit"] {
   color: white;
 }
 
-button[type="button"] {
+button[type="button"],
+button.cancel {
   background-color: #ccc;
+  color: #000;
 }
 
 button:hover {
   opacity: 0.9;
 }
 
-/* Logo */
-.logo {
-  display: block;
-  margin: 15px auto;
-  max-width: 120px;
-}
-
-/* Navigation links */
+/* ===== Navigation & Links ===== */
 a {
   text-decoration: none;
   color: #007bff;
   font-weight: bold;
-  margin: 0 5px;
+  margin: 0 10px;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-/* Recent Entries */
+/* ===== Logo ===== */
+img {
+  display: block;
+  margin: 15px auto;
+  max-width: 100px;
+  height: auto;
+}
+
+/* ===== Mood Entry Card ===== */
 .entry {
   background: #fff;
+  border-left: 4px solid green;
   border-radius: 10px;
   padding: 15px;
   margin: 15px 0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-body.dark-mode .entry {
-  background-color: #222;
-}
-
-/* Responsive Layout */
+/* ===== Responsive Layout ===== */
 @media (max-width: 480px) {
   body {
     padding: 10px;
   }
 
-  form {
-    padding: 15px;
-  }
-
   h1 {
     font-size: 1.5rem;
-  }
-
-  button {
-    width: 100%;
-  }
-
-  label {
-    font-size: 1rem;
-  }
-}
-/* Base layout */
-body {
-  margin: 0;
-  padding: 0 10px;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-}
-
-/* Make form responsive */
-form {
-  max-width: 500px;
-  width: 100%;
-  margin: 20px auto;
-  padding: 15px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-/* Inputs and buttons */
-textarea, input[type="text"], button {
-  font-size: 1rem;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-button {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #218838;
-}
-
-button.cancel {
-  background-color: #ccc;
-  color: #333;
-}
-
-.entry {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  padding: 10px;
-  background-color: #fff;
-  border-left: 4px solid green;
-}
-
-/* Responsive fix for smaller screens */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.4rem;
-    text-align: center;
-  }
-
-  form {
-    padding: 10px;
-    margin: 10px;
-  }
-
-  button {
-    width: 100%;
-  }
-
-  .entry {
-    padding: 8px;
-    font-size: 0.95rem;
-  }
-}
-/* Basic layout */
-body {
-  max-width: 600px;
-  margin: auto;
-  padding: 10px;
-  font-family: Arial, sans-serif;
-}
-
-/* Form styles */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-label {
-  font-size: 1rem;
-  display: block;
-}
-
-textarea {
-  width: 100%;
-  font-size: 1rem;
-  padding: 8px;
-}
-
-button {
-  padding: 10px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-/* Logo */
-img {
-  max-width: 100px;
-  height: auto;
-  margin-top: 10px;
-}
-
-/* Dark mode */
-body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
-
-.dark-mode input,
-.dark-mode textarea,
-.dark-mode button {
-  background-color: #333;
-  color: white;
-}
-
-/* Responsive styles */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.4rem;
   }
 
   h2 {
@@ -269,10 +122,15 @@ body.dark-mode {
   }
 
   label {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   button {
     width: 100%;
+  }
+
+  .entry {
+    font-size: 0.95rem;
+    padding: 10px;
   }
 }
