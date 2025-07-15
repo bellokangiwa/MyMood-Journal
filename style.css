@@ -206,3 +206,73 @@ button.cancel {
     font-size: 0.95rem;
   }
 }
+/* Basic layout */
+body {
+  max-width: 600px;
+  margin: auto;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-size: 1rem;
+  display: block;
+}
+
+textarea {
+  width: 100%;
+  font-size: 1rem;
+  padding: 8px;
+}
+
+button {
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Logo */
+img {
+  max-width: 100px;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode button {
+  background-color: #333;
+  color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  label {
+    font-size: 0.95rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
